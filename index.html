@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- container for home and favourites button -->
+    <div class="container-btn">
+        <button class="btn" id="homeBtn" title="My Home Page">Home <i class='fa fa-home'></i></button>
+        <button class="btn" id="show-favourites" title="Show My Favorite">Favorite <i class='fa fa-heart'></i></button>
+    </div>
+
+    <div class="main">
+        <!-- container for favourites quotes -->
+        <div class="quote-container" id="favourites-container" hidden>
+        </div>
+        <!-- container for home quotes -->
+        <div class="quote-container" id="quote-container">
+            <div class="container-text">
+                <i class="fa fa-pen"> </i> <i class="fa fa-quote-left" aria-hidden="true"></i> <span id="quote"></span>
+                <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </div>
+            <div class="author">
+                <span>>></span>
+                <span id="author"></span>
+            </div>
+            <div class="icon">
+                <button class="twitter" id="twitter">
+                    <i class="fab fa-twitter" id="twittericon"></i>
+                </button>
+                <i class='fa fa-heart heart' id="favourite" onclick="addQuoteToFavourites()"></i>
+                <button class="quote" id="new-quote">New Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader" id="loader"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
